@@ -24,6 +24,22 @@
   @keyframes shirt-enter{from{transform:translateY(35px) rotate(-7deg) scale(.92)}to{transform:translateY(0) rotate(0) scale(1)}}
   @keyframes story-enter{from{clip-path:inset(12% 8% round 24px);transform:translateY(45px)}to{clip-path:inset(0 round 24px);transform:translateY(0)}}
 }
+
+/* Static-folder product images: the shirt artwork is loaded from static/shirts/ */
+.product-image .product-art{width:82%;height:85%;object-fit:contain;filter:drop-shadow(18px 22px 16px #0003);transition:transform .5s ease}
+.product:hover .product-image .product-art{transform:translateY(-5px) scale(1.04)}
+.products-loading{color:var(--muted);padding:24px 0}
+.contact-socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.social-link{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:999px;padding:11px 15px;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;transition:background .2s,transform .2s}
+.social-link:hover{background:var(--panel);transform:translateY(-2px)}
+.social-link svg{width:17px;height:17px;display:block;fill:currentColor}
+
+
+.signup-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;background:var(--lime);color:#111;text-decoration:none;font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:11px;border:0;cursor:pointer;white-space:nowrap}
+.signup-cta:hover{transform:translateY(-2px)}
+.feedback-copy{margin-top:24px}
+.feedback-link{width:max-content}
+
 </style>
 </head>
 <body><main class="root">
@@ -31,18 +47,62 @@
 <nav class="nav"><a class="logo" href="#home" aria-label="Shounen Den home"><span class="brand-mark">SD</span><span class="brand-name">SHOUNEN DEN</span></a><div class="navlinks" id="navlinks"><a href="#collection">Collection</a><a href="#story">Our universe</a><a href="#manifesto">The mindset</a><a href="#contact">Contact</a></div><a class="nav-cta" href="#collection">Explore the drop ↗</a><button class="menu" id="menu" aria-label="Open navigation">☰</button></nav>
 <section class="hero" id="home"><div class="hero-content"><div class="eyebrow"><span class="dot"></span> Artwear from another dimension</div><h1>Wear your<br><em>own</em> arc.</h1><p class="hero-copy">Anime energy. Streetwear attitude. Original artwork made for people who were never background characters.</p><div class="hero-actions"><a class="btn" href="#collection">Enter the collection <span>↘</span></a><a class="btn ghost" href="#story">What we're about</a></div></div><div class="hero-art" aria-label="Original illustrated streetwear shirt"><div class="orbit"></div><div class="sun"></div><div class="shirt"><svg viewBox="0 0 340 380" role="img" aria-label="Black graphic t-shirt with original cosmic artwork"><defs><linearGradient id="fabric" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#33332f"/><stop offset=".5" stop-color="#171715"/><stop offset="1" stop-color="#080808"/></linearGradient><linearGradient id="flare"><stop stop-color="#d5ff3f"/><stop offset="1" stop-color="#ff5e92"/></linearGradient></defs><path d="M106 25 L139 12 Q170 34 201 12 L234 25 L316 74 L281 141 L244 121 L252 356 Q170 377 88 356 L96 121 L59 141 L24 74 Z" fill="url(#fabric)" stroke="#50504a" stroke-width="2"/><path d="M139 12 Q170 55 201 12" fill="none" stroke="#55554d" stroke-width="8"/><path d="M117 112 L170 78 L223 112 L199 153 L170 134 L141 153 Z" fill="none" stroke="url(#flare)" stroke-width="2"/><circle cx="170" cy="190" r="54" fill="none" stroke="#d5ff3f" stroke-width="1.5"/><circle cx="170" cy="190" r="39" fill="#d5ff3f" opacity=".12"/><path d="M126 214 L162 154 L184 195 L202 174 L220 222 Z" fill="url(#flare)"/><path d="M133 237 L207 237" stroke="#f5f1e8" stroke-width="2"/><text x="170" y="260" fill="#f5f1e8" font-size="14" font-weight="900" letter-spacing="4" text-anchor="middle">AFTER//DARK</text><text x="170" y="278" fill="#d5ff3f" font-size="7" letter-spacing="3" text-anchor="middle">VOL. 001 — UNBOUND</text><path d="M108 307 L140 307 M200 307 L232 307" stroke="#ff5e92" stroke-width="2"/></svg></div><div class="art-label">DROP 001 / UNBOUND</div></div><div class="hero-index">01 — 03 &nbsp; / &nbsp; SCROLL TO EXPLORE ↓</div></section>
 <div class="marquee"><div class="marquee-track"><span>NOT MERCH. A MINDSET.</span> ✳ <span>DRAWN FOR THE DIFFERENT</span> ✳ <span>YOUR STORY. YOUR RULES.</span> ✳ <span>NOT MERCH. A MINDSET.</span> ✳ <span>DRAWN FOR THE DIFFERENT</span> ✳ <span>YOUR STORY. YOUR RULES.</span> ✳ </div></div>
-<section class="section" id="collection"><div class="section-head reveal"><div><div class="kicker">01 / The first chapter</div><h2>Made to<br>stand out.</h2></div><p class="section-intro">Original concepts, bold silhouettes, and little details for people who find inspiration in every frame. Meet the world we're building.</p></div><div class="products">
-<article class="product reveal delay1"><div class="product-image"><span class="tag">CONCEPT 001</span><div class="shirt"><svg viewBox="0 0 340 380"><path d="M106 25 L139 12 Q170 34 201 12 L234 25 L316 74 L281 141 L244 121 L252 356 Q170 377 88 356 L96 121 L59 141 L24 74 Z" fill="#101010" stroke="#444" stroke-width="2"/><path d="M139 12 Q170 55 201 12" fill="none" stroke="#555" stroke-width="8"/><circle cx="170" cy="175" r="57" fill="none" stroke="#ff5e92" stroke-width="2"/><path d="M112 205 L165 126 L193 183 L222 150 L237 218 Z" fill="#ff5e92"/><path d="M128 230 L212 230" stroke="#d5ff3f" stroke-width="3"/><text x="170" y="252" fill="#fff" font-size="15" font-weight="900" letter-spacing="4" text-anchor="middle">VOID RUNNER</text><text x="170" y="269" fill="#d5ff3f" font-size="7" letter-spacing="3" text-anchor="middle">NO DESTINATION</text></svg></div></div><div class="product-meta"><div><div class="product-name">Void Runner Tee</div><div class="product-sub">Black / Original graphic</div><div class="product-note">Concept artwork</div></div><div class="product-price">01</div></div></article>
-<article class="product reveal delay2"><div class="product-image"><span class="tag">CONCEPT 002</span><div class="shirt"><svg viewBox="0 0 340 380"><path d="M106 25 L139 12 Q170 34 201 12 L234 25 L316 74 L281 141 L244 121 L252 356 Q170 377 88 356 L96 121 L59 141 L24 74 Z" fill="#e7e2d8" stroke="#b6b0a6" stroke-width="2"/><path d="M139 12 Q170 55 201 12" fill="none" stroke="#aaa49a" stroke-width="8"/><path d="M117 145 L223 145 M117 154 L223 154" stroke="#171714" stroke-width="2"/><text x="170" y="190" fill="#171714" font-size="34" font-weight="1000" letter-spacing="-2" text-anchor="middle">NO</text><text x="170" y="221" fill="#ff5e92" font-size="34" font-weight="1000" letter-spacing="-2" text-anchor="middle">LIMITS</text><path d="M140 246 L200 246" stroke="#171714" stroke-width="2"/><text x="170" y="264" fill="#171714" font-size="8" letter-spacing="3" text-anchor="middle">STAY UNWRITTEN</text><path d="M122 295 L218 295" stroke="#171714" stroke-width="1"/></svg></div></div><div class="product-meta"><div><div class="product-name">Unwritten Tee</div><div class="product-sub">Bone / Type study</div><div class="product-note">Concept artwork</div></div><div class="product-price">02</div></div></article>
-<article class="product reveal delay3"><div class="product-image"><span class="tag">CONCEPT 003</span><div class="shirt"><svg viewBox="0 0 340 380"><path d="M106 25 L139 12 Q170 34 201 12 L234 25 L316 74 L281 141 L244 121 L252 356 Q170 377 88 356 L96 121 L59 141 L24 74 Z" fill="#202b39" stroke="#526071" stroke-width="2"/><path d="M139 12 Q170 55 201 12" fill="none" stroke="#526071" stroke-width="8"/><path d="M170 106 L216 166 L170 228 L124 166 Z" fill="none" stroke="#9bc9ff" stroke-width="3"/><path d="M170 126 L199 166 L170 206 L141 166 Z" fill="#9bc9ff" opacity=".8"/><circle cx="170" cy="166" r="13" fill="#d5ff3f"/><text x="170" y="258" fill="#f5f1e8" font-size="13" font-weight="900" letter-spacing="3" text-anchor="middle">BLUE HOUR</text><text x="170" y="275" fill="#9bc9ff" font-size="7" letter-spacing="3" text-anchor="middle">FIND YOUR NORTH</text><path d="M128 299 L212 299" stroke="#9bc9ff" stroke-width="2"/></svg></div></div><div class="product-meta"><div><div class="product-name">Blue Hour Tee</div><div class="product-sub">Midnight / Signal series</div><div class="product-note">Concept artwork</div></div><div class="product-price">03</div></div></article></div></section>
+<section class="section" id="collection"><div class="section-head reveal"><div><div class="kicker">01 / The first chapter</div><h2>Made to<br>stand out.</h2></div><p class="section-intro">Original concepts, bold silhouettes, and little details for people who find inspiration in every frame. Meet the world we're building.</p></div><div class="products" id="product-grid" aria-live="polite"><p class="products-loading">Loading the collection…</p></div>
+</section>
 <section class="story" id="story"><div class="story-visual reveal"><div class="story-graphic">CREATE<br>YOUR<br>OWN LORE.</div></div><div class="reveal delay1"><div class="kicker">02 / Why we exist</div><h2 class="section" style="padding:12px 0 0">Fandom<br>is a feeling.<br><span style="color:var(--pink)">Style is yours.</span></h2><p>Shounen Den is an independent artwear concept born where anime-inspired imagination meets everyday street style. We start with a blank canvas, build original worlds, and turn those worlds into wearable ideas.</p><p>No borrowed heroes. No copy-paste designs. Just fresh artwork, expressive fits, and a community that likes to write its own story.</p><a class="btn" href="#manifesto">Read the mindset ↗</a></div></section>
 <section class="manifesto" id="manifesto"><div class="kicker reveal">03 / The mindset</div><p class="reveal">You don't need to be the hero of <span>their</span> story.</p><p class="reveal delay1">Build a world where <span>you</span> belong.</p><small class="reveal delay2">SHOUNEN DEN — ORIGINAL WORLDS. EVERYDAY WEAR.</small></section>
-<section class="newsletter"><div><div class="kicker" style="color:#171811">Stay in the loop</div><h2>THE NEXT ARC<br>STARTS HERE.</h2><p>First looks, fresh concepts, and launch news. No spam, just signals from our universe.</p></div><form class="signup" id="signup"><input id="email" type="email" placeholder="Your email address" aria-label="Your email address" required><button type="submit">Count me in ↗</button></form></section>
-<section class="newsletter" id="contact"><div><div class="kicker" style="color:#171811">Get in touch</div><h2>LET'S CREATE<br>SOMETHING NEW.</h2><p>For clothing edits, collaborations, and launch enquiries, contact us using the details you add before publishing.</p></div><div class="contact-details"><p><strong>Email</strong><br><a href="mailto:hello@shounenden.example">hello@shounenden.example</a></p><p><strong>Instagram</strong><br><a href="https://instagram.com/" target="_blank" rel="noreferrer">Add your Instagram handle</a></p><p><strong>Business enquiries</strong><br>Replace these placeholder details with your official contact information.</p></div></section>
+<section class="newsletter"><div><div class="kicker" style="color:#171811">Stay in the loop</div><h2>THE NEXT ARC<br>STARTS HERE.</h2><p>Get launch updates and first looks. Join the list using our Google Form.</p></div><a class="button signup-cta" href="https://forms.google.com/" target="_blank" rel="noopener noreferrer">Count me in ↗</a></section>
+<section class="newsletter" id="contact"><div><div class="kicker" style="color:#171811">Get in touch</div><h2>LET'S CREATE<br>SOMETHING NEW.</h2><p>For clothing edits, collaborations, and launch enquiries, contact us using the details you add before publishing.</p></div><div class="contact-details">
+<p><strong>Email</strong><br><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
+<p><strong>Socials</strong></p>
+<div class="contact-socials">
+<a class="social-link" href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noreferrer" aria-label="Instagram">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 2.3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2.2a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.8-3.4a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/></svg>Instagram</a>
+<a class="social-link" href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noreferrer" aria-label="Facebook">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.6 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.4-.1-2.6-.1-2.6 0-4.3 1.6-4.3 4.4v2H7.1V13H10v8h3.6z"/></svg>Facebook</a>
+<a class="social-link" href="https://youtube.com/@YOUR_CHANNEL" target="_blank" rel="noreferrer" aria-label="YouTube">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.1a3 3 0 0 0-2.1-2.2C19 4.4 12 4.4 12 4.4s-7 0-8.9.5A3 3 0 0 0 1 7.1 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.9a3 3 0 0 0 2.1 2.2c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.2 31 31 0 0 0 .5-4.9 31 31 0 0 0-.5-4.9zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>YouTube</a>
+<a class="social-link" href="https://wa.me/YOUR_NUMBER" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 2 17.7L.5 23.5l6-1.6A11.8 11.8 0 0 0 20.5 3.5zM12 21a9.1 9.1 0 0 1-4.6-1.2l-.3-.2-3.5.9.9-3.4-.2-.3A9.1 9.1 0 1 1 12 21zm5-6.8c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.2-.8.9-1 1.1-.4.2-.7.1a7.5 7.5 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5s-.7-1.6-1-2.2c-.2-.5-.5-.4-.7-.4H7.5c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4a10.8 10.8 0 0 0 4.2 3.7c.6.3 1.1.5 1.5.6.6.2 1.2.2 1.7.1.5-.1 1.7-.7 1.9-1.4s.2-1.3.2-1.4-.2-.2-.5-.4z"/></svg>WhatsApp</a>
+</div>
+<p><strong>Business enquiries</strong><br>Replace the placeholder links with your official profiles before publishing.</p>
+<p class="feedback-copy"><strong>Help us improve</strong><br>Share your thoughts on the designs and website.</p>
+<a class="social-link feedback-link" href="https://forms.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Send feedback to Google Forms">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7l-5 3v-3H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 5v2h10V8H7zm0 4v2h7v-2H7z"/></svg>Send feedback ↗</a>
+</div></section>
 <footer><a class="logo" href="#home"><span class="brand-mark">SD</span><span class="brand-name">SHOUNEN DEN</span></a><span>INDEPENDENT ARTWEAR · MADE FOR THE DIFFERENT</span><a href="#home">BACK TO TOP ↑</a></footer>
-</main><script>
+</main><script src="static/products.js"></script>
+<script>
 /* Smooth the shirt silhouette: rounded shoulder transitions, sleeve corners and curved hem. */
 document.querySelectorAll('.shirt svg path:first-of-type').forEach(path=>{path.setAttribute('d','M106 25 Q121 17 139 12 Q170 35 201 12 Q219 17 234 25 L302 66 Q310 71 306 81 L283 132 Q280 139 273 136 L244 121 L251 344 Q251 355 239 359 Q170 377 101 359 Q89 355 89 344 L96 121 L67 136 Q60 139 57 132 L34 81 Q30 71 38 66 Z');path.setAttribute('stroke-linejoin','round');path.setAttribute('stroke-linecap','round')});
+
+// Product catalogue is loaded from static/products.js. No fetch() means it also works from file://.
+(function loadProductCollection(){
+  const grid = document.getElementById('product-grid');
+  if(!grid) return;
+  const products = window.SHOUNEN_DEN_PRODUCTS || [];
+  if(!products.length){
+    grid.innerHTML = '<p class="products-loading">No products found. Check static/products.js.</p>';
+    return;
+  }
+  grid.innerHTML = products.map((p, i) => `
+    <article class="product reveal ${i===1?'delay1':i===2?'delay2':''}">
+      <div class="product-image">
+        <span class="tag">${p.tag || 'NEW DESIGN'}</span>
+        <img class="product-art" src="${p.image}" alt="${p.alt || p.name}" loading="lazy"
+          onerror="this.onerror=null;this.src='static/shirts/void-runner.svg';this.alt='Sample shirt placeholder';">
+      </div>
+      <div class="product-meta">
+        <div><div class="product-name">${p.name}</div><div class="product-sub">${p.subtitle || ''}</div><div class="product-note">Original concept</div></div>
+        <div class="product-price">${p.number || String(i+1).padStart(2,'0')}</div>
+      </div>
+    </article>`).join('');
+  const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}
+  }), {threshold:.12});
+  grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+})();
+
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 const menu=document.getElementById('menu'),links=document.getElementById('navlinks');menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.textContent=open?'×':'☰';menu.setAttribute('aria-expanded',String(open))});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.textContent='☰';menu.setAttribute('aria-expanded','false')}));
 document.getElementById('signup').addEventListener('submit',e=>{e.preventDefault();const email=document.getElementById('email');if(email.checkValidity()){const button=e.currentTarget.querySelector('button');button.textContent='YOU’RE ON THE LIST ✓';email.value='';email.placeholder='Thanks for joining the arc!';button.disabled=true}});

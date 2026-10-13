@@ -1,0 +1,38 @@
+[
+  {
+    "id": "void-runner",
+    "name": "Void Runner Tee",
+    "subtitle": "Black / Original graphic",
+    "number": "01",
+    "tag": "CONCEPT 001",
+    "image": "static/shirts/void-runner.svg",
+    "alt": "Void Runner Tee original clothing concept"
+  },
+  {
+    "id": "unwritten",
+    "name": "Unwritten Tee",
+    "subtitle": "Bone / Type study",
+    "number": "02",
+    "tag": "CONCEPT 002",
+    "image": "static/shirts/unwritten.svg",
+    "alt": "Unwritten Tee original clothing concept"
+  },
+  {
+    "id": "blue-hour",
+    "name": "Blue Hour Tee",
+    "subtitle": "Midnight / Signal series",
+    "number": "03",
+    "tag": "CONCEPT 003",
+    "image": "static/shirts/blue-hour.svg",
+    "alt": "Blue Hour Tee original clothing concept"
+  },
+  {
+    "id": "sample-signal",
+    "name": "Signal Tee (Sample)",
+    "subtitle": "Demo / Replace before launch",
+    "number": "04",
+    "tag": "SAMPLE IMAGE",
+    "image": "static/shirts/sample-signal.svg",
+    "alt": "Demo shirt mockup with geometric artwork"
+  }
+]
