@@ -37,3 +37,12 @@ Replace YOUR_EMAIL@example.com, YOUR_HANDLE, YOUR_PAGE, YOUR_CHANNEL, and YOUR_N
 
 SAMPLE ART
 The “Signal Tee (Sample)” is placeholder/demo artwork. Replace it with your own final product design before launch.
+
+
+MULTI-IMAGE PRODUCT SLIDER
+Each product can have an images array in static/products.js (and static/products.json):
+"images": [
+  {"label":"Front","src":"static/shirts/void-runner.svg","alt":"Front view of shirt"},
+  {"label":"Back","src":"static/shirts/void-runner-back.png","alt":"Back view of shirt"}
+]
+The product card shows previous/next arrows, view label, and dot buttons. On touchscreens, swipe left/right to switch views. Replace sample-back.svg with each product's actual back image and update the corresponding src. You can add more entries such as Detail, Sleeve, or Close-up.

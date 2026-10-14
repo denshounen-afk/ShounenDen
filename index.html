@@ -40,11 +40,25 @@
 .feedback-copy{margin-top:24px}
 .feedback-link{width:max-content}
 
+
+/* Product front/back image slider */
+.product-image{isolation:isolate}
+.product-image .product-art{position:relative;z-index:1;display:block}
+.product-image .slider-controls{position:absolute;z-index:5;left:12px;right:12px;bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;pointer-events:none}
+.product-image .slider-arrow,.product-image .slider-view{pointer-events:auto;border:1px solid #ffffff65;background:#111e;color:#fff;backdrop-filter:blur(8px);border-radius:999px;min-height:32px;padding:0 11px;font:800 9px/1 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.product-image .slider-arrow{width:32px;padding:0;font-size:16px;display:grid;place-items:center}
+.product-image .slider-view{min-width:68px}
+.product-image .slider-dots{position:absolute;z-index:5;top:16px;right:14px;display:flex;gap:5px}
+.product-image .slider-dot{width:6px;height:6px;border:0;border-radius:50%;padding:0;background:#fff8;cursor:pointer}
+.product-image .slider-dot.active{background:var(--acid);transform:scale(1.35)}
+.product-image .slider-arrow:focus-visible,.product-image .slider-view:focus-visible,.product-image .slider-dot:focus-visible{outline:2px solid var(--acid);outline-offset:3px}
+@media(max-width:720px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}.product-image .slider-controls{left:8px;right:8px;bottom:8px}.product-image .slider-arrow{width:29px;min-height:29px}.product-image .slider-view{min-height:29px;padding:0 8px}}
+
 </style>
 </head>
 <body><main class="root">
 <div class="topline">Shounen Den · Independent artwear &nbsp; ✳ &nbsp; Made for the main character</div>
-<nav class="nav"><a class="logo" href="#home" aria-label="Shounen Den home"><span class="brand-mark">SD</span><span class="brand-name">SHOUNEN DEN</span></a><div class="navlinks" id="navlinks"><a href="#collection">Collection</a><a href="#story">Our universe</a><a href="#manifesto">The mindset</a><a href="#contact">Contact</a></div><a class="nav-cta" href="#collection">Explore the drop ↗</a><button class="menu" id="menu" aria-label="Open navigation">☰</button></nav>
+<nav class="nav"><a class="logo" href="#home" aria-label="Shounen Den home"><span class="brand-mark"></span><span class="brand-name">SHOUNEN DEN</span></a><div class="navlinks" id="navlinks"><a href="#collection">Collection</a><a href="#story">Our universe</a><a href="#manifesto">The mindset</a><a href="#contact">Contact</a></div><a class="nav-cta" href="#collection">Explore the drop ↗</a><button class="menu" id="menu" aria-label="Open navigation">☰</button></nav>
 <section class="hero" id="home"><div class="hero-content"><div class="eyebrow"><span class="dot"></span> Artwear from another dimension</div><h1>Wear your<br><em>own</em> arc.</h1><p class="hero-copy">Anime energy. Streetwear attitude. Original artwork made for people who were never background characters.</p><div class="hero-actions"><a class="btn" href="#collection">Enter the collection <span>↘</span></a><a class="btn ghost" href="#story">What we're about</a></div></div><div class="hero-art" aria-label="Original illustrated streetwear shirt"><div class="orbit"></div><div class="sun"></div><div class="shirt"><svg viewBox="0 0 340 380" role="img" aria-label="Black graphic t-shirt with original cosmic artwork"><defs><linearGradient id="fabric" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#33332f"/><stop offset=".5" stop-color="#171715"/><stop offset="1" stop-color="#080808"/></linearGradient><linearGradient id="flare"><stop stop-color="#d5ff3f"/><stop offset="1" stop-color="#ff5e92"/></linearGradient></defs><path d="M106 25 L139 12 Q170 34 201 12 L234 25 L316 74 L281 141 L244 121 L252 356 Q170 377 88 356 L96 121 L59 141 L24 74 Z" fill="url(#fabric)" stroke="#50504a" stroke-width="2"/><path d="M139 12 Q170 55 201 12" fill="none" stroke="#55554d" stroke-width="8"/><path d="M117 112 L170 78 L223 112 L199 153 L170 134 L141 153 Z" fill="none" stroke="url(#flare)" stroke-width="2"/><circle cx="170" cy="190" r="54" fill="none" stroke="#d5ff3f" stroke-width="1.5"/><circle cx="170" cy="190" r="39" fill="#d5ff3f" opacity=".12"/><path d="M126 214 L162 154 L184 195 L202 174 L220 222 Z" fill="url(#flare)"/><path d="M133 237 L207 237" stroke="#f5f1e8" stroke-width="2"/><text x="170" y="260" fill="#f5f1e8" font-size="14" font-weight="900" letter-spacing="4" text-anchor="middle">AFTER//DARK</text><text x="170" y="278" fill="#d5ff3f" font-size="7" letter-spacing="3" text-anchor="middle">VOL. 001 — UNBOUND</text><path d="M108 307 L140 307 M200 307 L232 307" stroke="#ff5e92" stroke-width="2"/></svg></div><div class="art-label">DROP 001 / UNBOUND</div></div><div class="hero-index">01 — 03 &nbsp; / &nbsp; SCROLL TO EXPLORE ↓</div></section>
 <div class="marquee"><div class="marquee-track"><span>NOT MERCH. A MINDSET.</span> ✳ <span>DRAWN FOR THE DIFFERENT</span> ✳ <span>YOUR STORY. YOUR RULES.</span> ✳ <span>NOT MERCH. A MINDSET.</span> ✳ <span>DRAWN FOR THE DIFFERENT</span> ✳ <span>YOUR STORY. YOUR RULES.</span> ✳ </div></div>
 <section class="section" id="collection"><div class="section-head reveal"><div><div class="kicker">01 / The first chapter</div><h2>Made to<br>stand out.</h2></div><p class="section-intro">Original concepts, bold silhouettes, and little details for people who find inspiration in every frame. Meet the world we're building.</p></div><div class="products" id="product-grid" aria-live="polite"><p class="products-loading">Loading the collection…</p></div>
@@ -70,7 +84,7 @@
 <a class="social-link feedback-link" href="https://forms.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Send feedback to Google Forms">
 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7l-5 3v-3H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 5v2h10V8H7zm0 4v2h7v-2H7z"/></svg>Send feedback ↗</a>
 </div></section>
-<footer><a class="logo" href="#home"><span class="brand-mark">SD</span><span class="brand-name">SHOUNEN DEN</span></a><span>INDEPENDENT ARTWEAR · MADE FOR THE DIFFERENT</span><a href="#home">BACK TO TOP ↑</a></footer>
+<footer><a class="logo" href="#home"><span class="brand-mark"></span><span class="brand-name">SHOUNEN DEN</span></a><span>INDEPENDENT ARTWEAR · MADE FOR THE DIFFERENT</span><a href="#home">BACK TO TOP ↑</a></footer>
 </main><script src="static/products.js"></script>
 <script>
 /* Smooth the shirt silhouette: rounded shoulder transitions, sleeve corners and curved hem. */
@@ -85,18 +99,68 @@ document.querySelectorAll('.shirt svg path:first-of-type').forEach(path=>{path.s
     grid.innerHTML = '<p class="products-loading">No products found. Check static/products.js.</p>';
     return;
   }
-  grid.innerHTML = products.map((p, i) => `
-    <article class="product reveal ${i===1?'delay1':i===2?'delay2':''}">
-      <div class="product-image">
+  grid.innerHTML = products.map((p, i) => {
+    const views = Array.isArray(p.images) && p.images.length
+      ? p.images
+      : [{label:'Front', src:p.image, alt:p.alt || p.name}];
+    const safeViews = views.map(v => ({label:v.label || 'View', src:v.src || v.image || p.image, alt:v.alt || p.alt || p.name}));
+    return `
+    <article class="product reveal ${i===1?'delay1':i===2?'delay2':''}" data-product-index="${i}">
+      <div class="product-image" data-slider-index="0">
         <span class="tag">${p.tag || 'NEW DESIGN'}</span>
-        <img class="product-art" src="${p.image}" alt="${p.alt || p.name}" loading="lazy"
+        <img class="product-art" src="${safeViews[0].src}" alt="${safeViews[0].alt}" loading="lazy"
           onerror="this.onerror=null;this.src='static/shirts/void-runner.svg';this.alt='Sample shirt placeholder';">
+        ${safeViews.length > 1 ? `
+          <div class="slider-dots" aria-label="Choose shirt view">
+            ${safeViews.map((v, vi) => `<button type="button" class="slider-dot ${vi===0?'active':''}" aria-label="Show ${v.label}" aria-pressed="${vi===0?'true':'false'}" data-view-index="${vi}"></button>`).join('')}
+          </div>
+          <div class="slider-controls">
+            <button type="button" class="slider-arrow" data-slider-prev aria-label="Previous shirt view">‹</button>
+            <button type="button" class="slider-view" data-slider-label>${safeViews[0].label}</button>
+            <button type="button" class="slider-arrow" data-slider-next aria-label="Next shirt view">›</button>
+          </div>` : ''}
       </div>
       <div class="product-meta">
         <div><div class="product-name">${p.name}</div><div class="product-sub">${p.subtitle || ''}</div><div class="product-note">Original concept</div></div>
         <div class="product-price">${p.number || String(i+1).padStart(2,'0')}</div>
       </div>
-    </article>`).join('');
+    </article>`;
+  }).join('');
+  grid.querySelectorAll('.product').forEach((card, productIndex) => {
+    const views = (products[productIndex].images && products[productIndex].images.length)
+      ? products[productIndex].images
+      : [{label:'Front',src:products[productIndex].image,alt:products[productIndex].alt || products[productIndex].name}];
+    const frame = card.querySelector('.product-image');
+    const img = card.querySelector('.product-art');
+    const label = card.querySelector('[data-slider-label]');
+    const dots = [...card.querySelectorAll('[data-view-index]')];
+    let active = 0;
+    function showView(next) {
+      active = (next + views.length) % views.length;
+      const view = views[active];
+      img.src = view.src || view.image || products[productIndex].image;
+      img.alt = view.alt || products[productIndex].name;
+      frame.dataset.sliderIndex = String(active);
+      if(label) label.textContent = view.label || `View ${active+1}`;
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('active', dotIndex===active);
+        dot.setAttribute('aria-pressed', dotIndex===active ? 'true' : 'false');
+      });
+    }
+    card.querySelector('[data-slider-prev]')?.addEventListener('click', () => showView(active-1));
+    card.querySelector('[data-slider-next]')?.addEventListener('click', () => showView(active+1));
+    dots.forEach((dot, dotIndex) => dot.addEventListener('click', () => showView(dotIndex)));
+    if(views.length > 1){
+      let touchStartX = null;
+      frame.addEventListener('touchstart', e => {touchStartX=e.changedTouches[0].clientX;},{passive:true});
+      frame.addEventListener('touchend', e => {
+        if(touchStartX===null) return;
+        const dx=e.changedTouches[0].clientX-touchStartX;
+        if(Math.abs(dx)>35) showView(active+(dx<0?1:-1));
+        touchStartX=null;
+      },{passive:true});
+    }
+  });
   const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
     if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}
   }), {threshold:.12});
