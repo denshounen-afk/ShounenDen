@@ -6,7 +6,7 @@ window.SHOUNEN_DEN_PRODUCTS = [
     "subtitle": "Black / Original graphic",
     "number": "01",
     "tag": "CONCEPT 001",
-    "image": "static/shirts/scam-scammer.gif",
+    "image": "static/shirts/anti_magic.gif",
     "alt": "Void Runner Tee original clothing concept"
   },
   {
