@@ -16,7 +16,7 @@ window.SHOUNEN_DEN_PRODUCTS = [
       },
       {
         "label": "Back",
-        "src": "static/shirts/Horizon_front.png",
+        "src": "static/shirts/Horizon_Back.png",
         "alt": "Void Runner Tee \u2014 sample back view"
       }
     ]
